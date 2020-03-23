@@ -16,7 +16,7 @@ const lambda = new Lambda({
   endpoint: "http://localhost:3007",
 });
 
-exports.invokeInvocationTypeEvent = async function invokeInvocationTypeEvent() {
+exports.invokeEvent = async function invokeEvent() {
   const params = {
     // ClientContext: undefined,
     FunctionName: "so-v6-dev-invokedHandler",
@@ -32,10 +32,10 @@ exports.invokeInvocationTypeEvent = async function invokeInvocationTypeEvent() {
   };
 };
 
-exports.invokeInvocationTypeRequestResponse = async function invokeInvocationTypeRequestResponse() {
+exports.invokeRequestResponse = async function invokeRequestResponse() {
   const params = {
     // ClientContext: undefined,
-    FunctionName: "lambda-invoke-tests-dev-invokedHandler",
+    FunctionName: "so-v6-dev-invokedHandler",
     InvocationType: "RequestResponse",
     // Payload: undefined,
   };
@@ -48,4 +48,4 @@ exports.invokeInvocationTypeRequestResponse = async function invokeInvocationTyp
   };
 };
 
-module.exports = { handlerToInvoke };
+exports.invokedHandler = handlerToInvoke;
