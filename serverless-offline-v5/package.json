@@ -6,8 +6,8 @@
   "scripts": {
     "start": "serverless offline",
     "debug": "nodemon -e js,yml --inspect --exec '$(npm bin)/serverless offline'",
-    "invoke:event": "serverless invoke local --function invokeEvent",
-    "invoke:event:http": "curl http://localhost:3005/dev/invoke-event"
+    "invoke:function": "serverless invoke local --function invokeEvent",
+    "invoke:http": "curl http://localhost:3005/dev/invoke-event"
   },
   "keywords": [],
   "author": "",

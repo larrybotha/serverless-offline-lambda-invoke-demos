@@ -35,7 +35,7 @@ exports.invokeEvent = async function invokeEvent() {
 exports.invokeRequestResponse = async function invokeRequestResponse() {
   const params = {
     // ClientContext: undefined,
-    FunctionName: "lambda-invoke-tests-dev-invokedHandler",
+    FunctionName: "so-v5-dev-invokedHandler",
     InvocationType: "RequestResponse",
     // Payload: undefined,
   };
