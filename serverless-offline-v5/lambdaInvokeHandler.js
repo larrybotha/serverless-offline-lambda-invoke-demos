@@ -37,7 +37,7 @@ exports.invokeRequestResponse = async function invokeRequestResponse() {
     // ClientContext: undefined,
     FunctionName: "so-v5-dev-invokedHandler",
     InvocationType: "RequestResponse",
-    // Payload: undefined,
+    Payload: JSON.stringify({ foo: "bar" }),
   };
 
   const response = await lambda.invoke(params).promise();
