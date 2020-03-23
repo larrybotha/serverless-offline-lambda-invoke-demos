@@ -7,15 +7,13 @@ async function handlerToInvoke(event, context) {
     console.log(`handlerToInvoke:`, count++, new Date());
   }, 1000);
 
-  new Promise((_, resolve) => {
-    setTimeout(() => {
-      const filename = `dist/${Date.now()}.txt`;
+  setTimeout(() => {
+    const filename = `dist/${Date.now()}.txt`;
 
-      fs.writeFileSync(filename, new Date());
-      console.log("resolved at: ", new Date());
-      clearInterval(timer);
-    }, 5000);
-  });
+    fs.writeFileSync(filename, new Date());
+    console.log("resolved at: ", new Date());
+    clearInterval(timer);
+  }, 5000);
 
   return {
     clientContext: context.clientContext,
