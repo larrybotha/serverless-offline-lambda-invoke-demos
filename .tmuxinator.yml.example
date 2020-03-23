@@ -7,5 +7,13 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        - npm run build:watch
-        - npm run test:watch
+        - npm run debug
+        - npm run invoke:event
+
+  - serverless-offline-v6:
+      root: <%= Dir.pwd %>/serverless-offline-v6
+      layout: main-vertical
+      panes:
+        - vim
+        - npm run debug
+        - npm run invoke:event
