@@ -3,20 +3,8 @@
 ```bash
 $ npm start
 
-$ npm run invoke:[function|http]
+$ npm run invoke:[event|reqres]:[function|http]
 ```
 
-- without prefix
-  - invoking with `serverless invoke` works as expected
-  - invoking with `curl` works as expected
-- with prefix
-  - neither invoking via `serverless invoke` nor `curl` result in the lambda
-      being invoked
-  - invoking the same handler, but without having it invoke another lambda works
-      as expected for both `serverless invoke` and `curl`
-
-### Conclusion
-
-With `serverless-offline@6` one cannot use prefixed endpoints when invoking
-lambdas from within other lambdas
-
+- invoking with `serverless invoke` works as expected
+- invoking with `curl` works as expected

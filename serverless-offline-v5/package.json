@@ -5,9 +5,11 @@
   "main": "lambdaInvoke.test.js",
   "scripts": {
     "start": "serverless offline",
-    "debug": "nodemon -e js,yml --inspect --exec '$(npm bin)/serverless offline'",
-    "invoke:function": "serverless invoke local --function invokeEvent",
-    "invoke:http": "curl http://localhost:3005/dev/invoke-event"
+    "debug": "node --inspect $(npm bin)/serverless offline",
+    "invoke:event:function": "$(npm bin)/serverless invoke local --function invokeEvent",
+    "invoke:event:http": "curl http://localhost:3005/invoke-event",
+    "invoke:reqres:function": "$(npm bin)/serverless invoke local --function invokeRequestResponse",
+    "invoke:reqres:http": "curl http://localhost:3005/invoke-request-response"
   },
   "keywords": [],
   "author": "",

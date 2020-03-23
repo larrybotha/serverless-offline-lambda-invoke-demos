@@ -8,7 +8,7 @@ custom:
   serverless-offline:
     showDuration: true
     port: 3005
-    prefix: dev
+    #prefix: dev
 
 provider:
   iamRoleStatements:

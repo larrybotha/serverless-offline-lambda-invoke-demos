@@ -3,7 +3,7 @@
 ```bash
 $ npm start
 
-$ npm run invoke:[function|http]
+$ npm run invoke:[event|reqres]:[function|http]
 ```
 
 - without prefix
