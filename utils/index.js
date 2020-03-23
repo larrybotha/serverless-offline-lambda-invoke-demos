@@ -9,7 +9,9 @@ async function handlerToInvoke(event, context) {
 
   new Promise((_, resolve) => {
     setTimeout(() => {
-      fs.writeFileSync(`out.text`, new Date());
+      const filename = `dist/${Date.now()}.txt`;
+
+      fs.writeFileSync(filename, new Date());
       console.log("resolved at: ", new Date());
       clearInterval(timer);
     }, 5000);
