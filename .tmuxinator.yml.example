@@ -1,0 +1,11 @@
+name: serverless-invoke-lambda-demos
+root: <%= Dir.pwd %>
+
+windows:
+  - serverless-offline-v5:
+      root: <%= Dir.pwd %>/serverless-offline-v5
+      layout: main-vertical
+      panes:
+        - vim
+        - npm run build:watch
+        - npm run test:watch

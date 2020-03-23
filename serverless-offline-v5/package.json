@@ -1,0 +1,19 @@
+{
+  "name": "lambda-invoke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lambdaInvoke.test.js",
+  "scripts": {
+    "start": "serverless offline",
+    "debug": "nodemon -e js,yml --inspect --exec '$(npm bin)/serverless offline'",
+    "invoke:event": "serverless invoke local --function invokeEvent",
+    "invoke:event:http": "curl http://localhost:3005/dev/invoke-event"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^1.67.0",
+    "serverless-offline": "^5.12.0"
+  }
+}
