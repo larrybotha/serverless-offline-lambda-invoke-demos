@@ -8,7 +8,7 @@ windows:
       panes:
         - vim
         - npm run debug
-        - npm run invoke:event
+        - npm run invoke:event:function
 
   - serverless-offline-v6:
       root: <%= Dir.pwd %>/serverless-offline-v6
@@ -16,4 +16,4 @@ windows:
       panes:
         - vim
         - npm run debug
-        - npm run invoke:event
+        - npm run invoke:event:function
